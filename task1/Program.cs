@@ -1,5 +1,5 @@
 ﻿//Задайте двумерный массив размером mxn, заполненный случайными вещественными числами
-Console.Write("Введите m: "); // Демонстрационная задача
+Console.Write("Введите m: "); 
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите n: ");
 int n = Convert.ToInt32(Console.ReadLine());
