@@ -27,7 +27,7 @@ for (int i = 0; i < m; i++)
 Console.WriteLine("Средние значения по строкам равны ");
 for (int i=0; i<m; i++)
 {
-    average = Math.Round(sum[i]/n,2);
+    average = Math.Round(sum[i]/m,2);
     Console.Write(average  + "     ");
 }
 
