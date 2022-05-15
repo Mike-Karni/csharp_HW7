@@ -4,33 +4,28 @@ Console.Write("Введите количество строк m: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов n: ");
 int n = Convert.ToInt32(Console.ReadLine());
-
-
 double[,] array = new double[m,n];
 double []sum = new double [n];
 FillArray(array);
 PrintArray(array);
-
-
 double average = 0;
 
 for (int i = 0; i < m; i++)
 {   
-    
     for (int j = 0; j < n; j++)
     {
-        sum[i]+=   array[i,j];
+        sum[j]+=   array[i,j];
     }
  Console.WriteLine();
 }
 
 Console.WriteLine("Средние значения по строкам равны ");
-for (int i=0; i<m; i++)
+
+for (int j=0; j<m; j++)
 {
-    average = Math.Round(sum[i]/m,2);
+    average = Math.Round(sum[j]/m,2);
     Console.Write(average  + "     ");
 }
-
 
 
 //МЕТОД ПЕЧАТИ МАССИВА
