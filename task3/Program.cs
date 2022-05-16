@@ -5,26 +5,24 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 double[,] array = new double[m,n];
-double []sum = new double [n];
+
 FillArray(array);
 PrintArray(array);
-double average = 0;
 
-for (int i = 0; i < m; i++)
-{   
-    for (int j = 0; j < n; j++)
-    {
-        sum[j]+=   array[i,j];
-    }
- Console.WriteLine();
-}
+Console.WriteLine("Средние значения по столбцам равны ");
 
-Console.WriteLine("Средние значения по строкам равны ");
 
-for (int j=0; j<m; j++)
+
+for (int j=0; j<n; j++)
 {
-    average = Math.Round(sum[j]/m,2);
-    Console.Write(average  + "     ");
+        double sum = 0;
+        double average = 0;
+        for (int i = 0; i < m; i++)
+        {
+            sum += array[i, j];
+        }
+        average = sum/ m;
+        Console.Write(Math.Round(average,2)  + "     ");   
 }
 
 
@@ -52,3 +50,4 @@ void FillArray(double[,] matr)
         Console.WriteLine();
     }
 }
+
